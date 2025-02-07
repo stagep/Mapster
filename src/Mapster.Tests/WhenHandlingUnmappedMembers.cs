@@ -19,7 +19,7 @@ namespace Mapster.Tests
         public void No_Errors_Thrown_With_Default_Configuration_On_Unmapped_Primitive()
         {
             TypeAdapterConfig.GlobalSettings.RequireDestinationMemberSource = false;
-            TypeAdapterConfig<ParentPoco, ParentDto>.NewConfig().Compile();
+            TypeAdapterConfig<SimplePoco, SimpleDto>.NewConfig().Compile();
 
             var source = new SimplePoco {Id = Guid.NewGuid(), Name = "TestName"};
 
